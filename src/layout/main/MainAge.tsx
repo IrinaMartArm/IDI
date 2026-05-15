@@ -30,22 +30,6 @@ export const MainAge = () => {
     <>
       <Hero />
       <main>
-        {/*<ExpertiseSection id="expertise">*/}
-        {/*  <Container>*/}
-        {/*    <Title>{t("expertiseTitle")}</Title>*/}
-        {/*    <ExpertiseGrid>*/}
-        {/*      {cards.map((card) => (*/}
-        {/*        <ExpertiseCard key={card.title}>*/}
-        {/*          <ExpertiseHeader>*/}
-        {/*            <ExpertiseIndex />*/}
-        {/*            <h3>{t(card.title)}</h3>*/}
-        {/*          </ExpertiseHeader>*/}
-        {/*          <p>{t(card.text)}</p>*/}
-        {/*        </ExpertiseCard>*/}
-        {/*      ))}*/}
-        {/*    </ExpertiseGrid>*/}
-        {/*  </Container>*/}
-        {/*</ExpertiseSection>*/}
         <BrandSection>
           <Container>
             <BrandShell>

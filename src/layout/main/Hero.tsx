@@ -79,6 +79,7 @@ export const Hero = () => {
 };
 
 const HeroSection = styled.section`
+  padding-top: 30px;
 `;
 
 const Shell = styled.div`

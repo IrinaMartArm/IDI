@@ -19,7 +19,7 @@ const Bar = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 14px 18px;
+  padding: 10px 24px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: ${Theme.radius.large};
   background: rgba(255, 252, 253, 0.88);
@@ -27,7 +27,7 @@ const Bar = styled.div`
 
   @media ${Theme.media.mobile} {
     gap: 12px;
-    padding: 8px 12px;
+    padding: 6px 14px;
     border-radius: 22px;
   }
 `;
@@ -155,6 +155,164 @@ const Tools = styled.div`
   @media ${Theme.media.mobile} {
     gap: 8px;
   }
+`;
+
+const MenuWrap = styled.div`
+  position: relative;
+  z-index: 1002;
+`;
+
+const MenuButton = styled.button<{ $open: boolean }>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  //background: ${(props) => (props.$open ? Theme.colors.primary100 : Theme.colors.primary50)};
+  //border: 1px solid rgba(201, 18, 93, ${(props) => (props.$open ? "0.26" : "0.18")});
+  transition: ${Theme.animations.transition};
+
+  &:hover {
+    background: ${Theme.colors.primary100};
+  }
+
+  @media ${Theme.media.mobile} {
+    border-radius: 14px;
+  }
+`;
+
+const MenuIcon = styled.img`
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.92;
+`;
+
+const MenuOverlay = styled.button<{ $open: boolean }>`
+  position: fixed;
+  inset: 0;
+  z-index: 1998;
+  background: rgba(67, 4, 31, 0.24);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: ${(props) => (props.$open ? 1 : 0)};
+  visibility: ${(props) => (props.$open ? "visible" : "hidden")};
+  pointer-events: ${(props) => (props.$open ? "auto" : "none")};
+  transition: ${Theme.animations.transition};
+`;
+
+const HeaderMenu = styled.div<{ $open: boolean }>`
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 1999;
+  width: min(340px, calc(100vw - 32px));
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: ${Theme.radius.large};
+  border: 1px solid rgba(201, 18, 93, 0.14);
+  background:
+    radial-gradient(circle at top right, rgba(255, 228, 239, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 241, 245, 0.97));
+  box-shadow: ${Theme.shadow.medium};
+  opacity: ${(props) => (props.$open ? 1 : 0)};
+  visibility: ${(props) => (props.$open ? "visible" : "hidden")};
+  pointer-events: ${(props) => (props.$open ? "auto" : "none")};
+  transform: translateY(${(props) => (props.$open ? "0" : "10px")});
+  transition: ${Theme.animations.transition};
+
+  @media ${Theme.media.mobile} {
+    position: fixed;
+    top: 84px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    padding: 16px;
+  }
+`;
+
+const HeaderMenuHead = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  strong {
+    ${font({ family: headingFont, weight: 700, fmax: 20, fmin: 17, color: Theme.colors.primaryDeep })};
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+`;
+
+const HeaderMenuClose = styled.button`
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(255, 246, 250, 0.92);
+  border: 1px solid rgba(201, 18, 93, 0.16);
+  flex: 0 0 38px;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    border-radius: ${Theme.radius.pill};
+    background: ${Theme.colors.primaryDeep};
+  }
+
+  span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+`;
+
+const HeaderMenuList = styled.div`
+  display: grid;
+  gap: 8px;
+`;
+
+const HeaderMenuItem = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 16px;
+  text-align: left;
+  border-radius: 16px;
+  border: 1px solid rgba(201, 18, 93, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  transition: ${Theme.animations.transition};
+
+  strong {
+    ${font({ weight: 700, fmax: 16, fmin: 14, color: Theme.colors.primaryDeep })};
+  }
+
+  &:hover {
+    background: ${Theme.colors.primary50};
+  }
+`;
+
+const HeaderMenuBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: ${Theme.radius.pill};
+  background: ${Theme.colors.primary100};
+  color: ${Theme.colors.primary700};
+  white-space: nowrap;
+  ${font({ weight: 700, fmax: 12, fmin: 11, color: Theme.colors.primary700 })};
 `;
 
 const MobileToggle = styled.button<{ $open?: boolean }>`
@@ -299,7 +457,7 @@ const MobileProductLink = styled(Link)<{ $active: boolean }>`
 `;
 
 const LogotipDesktop = styled.img`
-  width: 86px;
+  width: 106px;
   object-fit: contain;
 
   @media ${Theme.media.tablet} {
@@ -309,14 +467,12 @@ const LogotipDesktop = styled.img`
 
 const LogotipMobile = styled.img`
   display: none;
-  width: 46px;
-  height: 46px;
+  width: 96px;
   object-fit: contain;
 
   @media ${Theme.media.tablet} {
     display: block;
-    width: 46px;
-    height: 46px;
+    width: 66px;
   }
 `;
 
@@ -325,9 +481,19 @@ export const S = {
   Brand,
   BrandText,
   DesktopNav,
+  HeaderMenu,
+  HeaderMenuBadge,
+  HeaderMenuClose,
+  HeaderMenuHead,
+  HeaderMenuItem,
+  HeaderMenuList,
   Header,
   LogotipDesktop,
   LogotipMobile,
+  MenuButton,
+  MenuIcon,
+  MenuOverlay,
+  MenuWrap,
   MobileModal,
   MobileModalClose,
   MobileModalHeader,
