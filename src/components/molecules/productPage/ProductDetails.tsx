@@ -65,10 +65,10 @@ const DetailsSection = styled.section`
   padding: 30px 28px 28px;
   margin: 22px auto;
   border-radius: ${Theme.radius.large};
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.12), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(242, 247, 250, 0.94));
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
   box-shadow: ${Theme.shadow.soft};
 
   &::before {
@@ -77,7 +77,7 @@ const DetailsSection = styled.section`
     inset: auto -60px -90px auto;
     width: 220px;
     height: 220px;
-    background: radial-gradient(circle, rgba(228, 237, 243, 0.72), transparent 70%);
+    background: radial-gradient(circle, rgba(248, 217, 230, 0.72), transparent 70%);
     pointer-events: none;
   }
 
@@ -128,9 +128,10 @@ const DetailsBox = styled.div`
   gap: 24px;
   padding: 32px;
   text-align: left;
-  background: white;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(201, 18, 93, 0.10);
   border-radius: 24px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 30px rgba(95, 18, 51, 0.08);
 
   @media (max-width: 700px) {
     padding: 16px;
@@ -146,9 +147,9 @@ const DetailsHeading = styled.h2`
 const DetailsLead = styled.p`
   max-width: 44ch;
   margin: 0;
-  color: rgba(24, 49, 63, 0.76);
+  color: rgba(86, 16, 45, 0.72);
   white-space: pre-line;
-  ${font({ weight: 400, fmax: 18, fmin: 15, color: "rgba(24, 49, 63, 0.76)" })};
+  ${font({ weight: 400, fmax: 18, fmin: 15, color: Theme.colors.textMuted })};
 `;
 
 const MiniFeaturesGrid = styled.div`
@@ -168,14 +169,14 @@ const MiniFeatureCard = styled.article`
   gap: 6px;
   padding: 18px 18px 16px;
   border-radius: 18px;
-  background: rgba(247, 249, 251, 0.92);
-  border: 1px solid rgba(111, 143, 168, 0.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 246, 250, 0.92);
+  border: 1px solid rgba(201, 18, 93, 0.1);
+  box-shadow: 0 8px 20px rgba(95, 18, 51, 0.06);
 `;
 
 const MiniFeatureLabel = styled.span`
-  color: #6d7882;
-  ${font({ weight: 600, fmax: 16, fmin: 14, color: "#6d7882" })};
+  color: ${Theme.colors.textMuted};
+  ${font({ weight: 600, fmax: 16, fmin: 14, color: Theme.colors.textMuted })};
 `;
 
 const MiniFeatureValue = styled.strong`
@@ -189,8 +190,8 @@ const ChipsBlock = styled.div`
   gap: 10px;
   padding: 18px 20px;
   border-radius: 16px;
-  background: #fafafa;
-  border: 1px solid rgba(111, 143, 168, 0.12);
+  background: rgba(251, 244, 247, 0.96);
+  border: 1px solid rgba(201, 18, 93, 0.12);
 
   @media (max-width: 700px) {
     padding: 12px;
@@ -198,8 +199,8 @@ const ChipsBlock = styled.div`
 `;
 
 const ChipsLabel = styled.span`
-  color: #666;
-  ${font({ weight: 600, fmax: 13, fmin: 12, color: "#666" })};
+  color: ${Theme.colors.textMuted};
+  ${font({ weight: 600, fmax: 13, fmin: 12, color: Theme.colors.textMuted })};
 `;
 
 const ChipsWrap = styled.div`
@@ -215,9 +216,9 @@ const Chip = styled.span`
   padding: 0 14px;
   border-radius: ${Theme.radius.pill};
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   color: ${Theme.colors.primaryDeep};
-  box-shadow: 0 6px 16px rgba(18, 52, 59, 0.05);
+  box-shadow: 0 6px 16px rgba(95, 18, 51, 0.06);
   ${font({ weight: 600, fmax: 15, fmin: 13, color: Theme.colors.primaryDeep })};
 
   @media (max-width: 900px) {

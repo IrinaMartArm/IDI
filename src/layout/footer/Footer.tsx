@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                     </S.BrandLockup>
                     <Contacts />
                 </S.FooterMain>
-                <S.Copyright>© 2024 SARMED. {t("footerCopyright")}</S.Copyright>
+                <S.Copyright>© 2026 IDI {t("footerCopyright")}</S.Copyright>
             </S.FooterContent>
           {/*<Messengers />*/}
         </S.FooterWrapper>

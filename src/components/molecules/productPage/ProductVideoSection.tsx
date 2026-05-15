@@ -26,10 +26,10 @@ const VideoSection = styled.section`
   gap: 24px;
   padding: 30px 28px 28px;
   border-radius: ${Theme.radius.large};
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.12), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(242, 247, 250, 0.94));
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
   box-shadow: ${Theme.shadow.soft};
 
   @media (max-width: 900px) {
@@ -54,8 +54,8 @@ const VideoSectionLead = styled.p`
   margin: 0;
   max-width: 64ch;
   line-height: 1.6;
-  color: rgba(24, 49, 63, 0.76);
-  ${font({ weight: 400, fmax: 18, fmin: 15, color: "rgba(24, 49, 63, 0.76)" })};
+  color: rgba(86, 16, 45, 0.72);
+  ${font({ weight: 400, fmax: 18, fmin: 15, color: Theme.colors.textMuted })};
 `;
 
 const VideoPreviewWrap = styled.div`

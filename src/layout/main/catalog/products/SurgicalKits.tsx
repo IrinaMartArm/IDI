@@ -272,7 +272,7 @@ const KitVisual = styled.div`
   border-bottom: 1px solid #EAECEF;
   background:
     radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0) 42%),
-    linear-gradient(180deg, rgba(248, 251, 253, 0.96), rgba(240, 245, 248, 0.92));
+    linear-gradient(180deg, rgba(255, 249, 252, 0.96), rgba(247, 235, 241, 0.92));
 
   &::before {
     content: "";
@@ -283,7 +283,7 @@ const KitVisual = styled.div`
     height: 72%;
     transform: translate(-50%, -48%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(111, 143, 168, 0.16) 0%, rgba(111, 143, 168, 0.08) 38%, rgba(111, 143, 168, 0.02) 68%, transparent 82%);
+    background: radial-gradient(circle, rgba(201, 18, 93, 0.16) 0%, rgba(201, 18, 93, 0.08) 38%, rgba(201, 18, 93, 0.02) 68%, transparent 82%);
     filter: blur(20px);
     pointer-events: none;
   }

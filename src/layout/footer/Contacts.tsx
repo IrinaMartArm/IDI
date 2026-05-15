@@ -11,12 +11,12 @@ export const Contacts = () => {
 		{
 			img: loc,
 			name: 'address',
-			text: `${t("footerAddressValue")}`
+			text: `Краснодарский край, г. Краснодар, ул. Уральская, д. 71, к. 1, помещение123/1`
 		},
 		{
 			img: mail,
 			name: 'email',
-			text: `sarmed@gmail.com`
+			text: `info@med-systema.ru`
 		},
 	]
 
@@ -30,10 +30,19 @@ export const Contacts = () => {
 						<p>{el.text}</p>
 					</S.Contact>)
 			})}
-			<S.Contact2 href="tel:+37491001421">
+
+			<S.Phones>
 				<Image src={tel} alt="" width={22} height={22}/>
-				<p>{t("footerPhoneValue")}</p>
-			</S.Contact2>
+				<S.Social>
+					<S.Contact2 href="tel:+79183661754">
+						<p>+79183661754</p>
+					</S.Contact2>
+					<S.Contact2 href="tel:+79384779500">
+						<p>+79384779500</p>
+					</S.Contact2>
+				</S.Social>
+			</S.Phones>
+
 		</S.ContactsBox>
 	)
 }

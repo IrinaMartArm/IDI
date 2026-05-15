@@ -25,10 +25,10 @@ const DescriptionBox = styled.section`
   padding: 30px 28px 28px;
   margin: 22px auto;
   border-radius: ${Theme.radius.large};
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.12), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(242, 247, 250, 0.94));
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
   box-shadow: ${Theme.shadow.soft};
 
   &::before {
@@ -37,7 +37,7 @@ const DescriptionBox = styled.section`
     inset: auto -60px -90px auto;
     width: 220px;
     height: 220px;
-    background: radial-gradient(circle, rgba(228, 237, 243, 0.72), transparent 70%);
+    background: radial-gradient(circle, rgba(248, 217, 230, 0.72), transparent 70%);
     pointer-events: none;
   }
 
@@ -90,9 +90,9 @@ const SmallImgBox = styled.div`
   width: 100%;
   padding: 22px;
   border-radius: 26px;
-  border: 1px solid rgba(111, 143, 168, 0.12);
-  background: linear-gradient(180deg, rgba(242, 247, 250, 0.9), rgba(228, 237, 243, 0.76));
-  box-shadow: 0 18px 40px rgba(18, 52, 59, 0.06);
+  border: 1px solid rgba(201, 18, 93, 0.12);
+  background: linear-gradient(180deg, rgba(255, 248, 251, 0.94), rgba(245, 228, 236, 0.80));
+  box-shadow: 0 18px 40px rgba(95, 18, 51, 0.08);
   
 `
 
@@ -179,8 +179,8 @@ const Table = styled.img`
   max-width: 500px;
   width: 100%;
   border-radius: 20px;
-  border: 1px solid rgba(111, 143, 168, 0.22);
-  box-shadow: 0 12px 30px rgba(18, 52, 59, 0.06);
+  border: 1px solid rgba(201, 18, 93, 0.18);
+  box-shadow: 0 12px 30px rgba(95, 18, 51, 0.08);
 `
 
 const VideoBox = styled.div`

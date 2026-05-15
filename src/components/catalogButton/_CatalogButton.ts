@@ -10,7 +10,7 @@ const Overlay = styled.button<{ isOpen: boolean }>`
   position: fixed;
   inset: 0;
   z-index: 998;
-  background: rgba(18, 52, 59, 0.42);
+  background: rgba(67, 4, 31, 0.42);
   opacity: ${(props) => (props.isOpen ? 1 : 0)};
   visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
@@ -54,8 +54,8 @@ const MenuWrapper = styled.nav<{ isOpen: boolean }>`
     border-radius: 28px;
     border: 1px solid rgba(255, 255, 255, 0.72);
     background:
-      radial-gradient(circle at top right, rgba(242, 247, 250, 0.24), transparent 28%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(228, 237, 243, 0.92));
+      radial-gradient(circle at top right, rgba(201, 18, 93, 0.10), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(247, 233, 239, 0.92));
     overflow: hidden;
   }
 `
@@ -89,7 +89,7 @@ const CloseButton = styled.button`
     flex: 0 0 40px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.68);
-    border: 1px solid rgba(111, 143, 168, 0.18);
+    border: 1px solid rgba(201, 18, 93, 0.18);
 
     span {
       position: absolute;
@@ -146,7 +146,7 @@ const CatalogItem = styled.li<{ $active?: boolean }>`
   ${(props) =>
     props.$active &&
     css`
-      background: rgba(111, 143, 168, 0.12);
+      background: rgba(201, 18, 93, 0.10);
       &::before {
         transform: scale(1);
         background-color: ${Theme.colors.primary600};
@@ -169,7 +169,7 @@ const Button = styled.button`
   padding: 0 16px;
   border-radius: ${Theme.radius.pill};
   background: ${Theme.colors.primary50};
-  border: 1px solid rgba(111, 143, 168, 0.28);
+  border: 1px solid rgba(201, 18, 93, 0.22);
   text-align: center;
   ${font({weight: 700, fmax: 14, fmin: 12, color: Theme.colors.primaryDeep})};
   line-height: 1.2;

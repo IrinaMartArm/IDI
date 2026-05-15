@@ -204,9 +204,9 @@ const ThoughtBlock = styled.section`
 	padding: 28px 30px;
 	border-radius: ${Theme.radius.large};
 	background:
-		radial-gradient(circle at top right, rgba(111, 143, 168, 0.1), transparent 28%),
-		linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(242, 247, 250, 0.94));
-	border: 1px solid rgba(111, 143, 168, 0.14);
+		radial-gradient(circle at top right, rgba(201, 18, 93, 0.1), transparent 28%),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
+	border: 1px solid rgba(201, 18, 93, 0.14);
 	box-shadow: ${Theme.shadow.soft};
 
 	@media (max-width: 900px) {
@@ -229,12 +229,12 @@ const KitCard = styled.article<{ $accent: "drills" | "precision" | "accessories"
 	gap: 16px;
 	padding: 22px 18px;
 	border-radius: 24px;
-	border: 1px solid rgba(111, 143, 168, 0.14);
+	border: 1px solid rgba(201, 18, 93, 0.14);
 	background: rgba(255, 255, 255, 0.94);
 	box-shadow: ${(props) =>
 		props.$featured
-			? "0 20px 40px rgba(18, 52, 59, 0.1), 0 8px 18px rgba(111, 143, 168, 0.08)"
-			: "0 14px 30px rgba(18, 52, 59, 0.05)"};
+			? "0 20px 40px rgba(95, 18, 51, 0.12), 0 8px 18px rgba(201, 18, 93, 0.08)"
+			: "0 14px 30px rgba(95, 18, 51, 0.08)"};
 
 	&::before {
 		content: "";
@@ -242,9 +242,9 @@ const KitCard = styled.article<{ $accent: "drills" | "precision" | "accessories"
 		inset: 0;
 		background: ${(props) =>
 			props.$accent === "drills"
-				? "linear-gradient(180deg, rgba(111, 143, 168, 0.12), rgba(111, 143, 168, 0.03))"
+				? "linear-gradient(180deg, rgba(201, 18, 93, 0.12), rgba(201, 18, 93, 0.03))"
 				: props.$accent === "precision"
-					? "linear-gradient(180deg, rgba(47, 111, 115, 0.12), rgba(47, 111, 115, 0.03))"
+					? "linear-gradient(180deg, rgba(173, 14, 79, 0.12), rgba(173, 14, 79, 0.03))"
 					: "linear-gradient(180deg, rgba(199, 169, 107, 0.12), rgba(199, 169, 107, 0.03))"};
 		opacity: ${(props) => (props.$featured ? 1 : 0.7)};
 	}
@@ -264,9 +264,9 @@ const KitIcon = styled.span<{ $accent: "drills" | "precision" | "accessories" }>
 	border-radius: 18px;
 	background: ${(props) =>
 		props.$accent === "drills"
-			? "rgba(111, 143, 168, 0.14)"
+			? "rgba(201, 18, 93, 0.14)"
 			: props.$accent === "precision"
-				? "rgba(47, 111, 115, 0.14)"
+				? "rgba(173, 14, 79, 0.14)"
 				: "rgba(199, 169, 107, 0.18)"};
 `;
 

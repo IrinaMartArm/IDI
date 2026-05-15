@@ -19,7 +19,7 @@ export const ProductCardTitle = styled.h3<{
   $tone?: "default" | "neutral";
 }>`
   margin: 0;
-  color: ${(props) => (props.$tone === "neutral" ? "#1F2A37" : Theme.colors.primaryDeep)};
+  color: ${(props) => (props.$tone === "neutral" ? Theme.colors.text : Theme.colors.primaryDeep)};
   ${font({
     family: headingFont,
     weight: 700,
@@ -69,8 +69,8 @@ export const ProductBulletItem = styled.li<{
     props.$tone === "muted"
       ? Theme.colors.textMuted
       : props.$tone === "neutral"
-        ? "#374151"
-        : "rgba(24, 49, 63, 0.78)"};
+        ? Theme.colors.text
+        : "rgba(86, 16, 45, 0.78)"};
   ${font({
     weight: 500,
     fmax: 16,
@@ -125,6 +125,6 @@ export const ProductSceneImage = styled.img`
   object-fit: contain;
   filter:
     drop-shadow(0 12px 14px rgba(255, 255, 255, 0.2))
-    drop-shadow(0 28px 34px rgba(14, 31, 40, 0.22))
-    drop-shadow(0 54px 72px rgba(14, 31, 40, 0.18));
+    drop-shadow(0 28px 34px rgba(67, 4, 31, 0.20))
+    drop-shadow(0 54px 72px rgba(67, 4, 31, 0.16));
 `;

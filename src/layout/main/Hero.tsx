@@ -7,7 +7,7 @@ import { headingFont, font } from "../../style/Common";
 import { Theme } from "../../style/Theme";
 import { useTranslation } from "react-i18next";
 // import creativeFabrica2 from "../../images/pictures/catalog/ChatGPT Image Apr 11, 2026, 10_08_13 AM.png";
-import creativeFabrica2 from "../../images/pictures/main/creativefabrica.png";
+import creativeFabrica2 from "../../images/pictures/main/hero.png";
 import { getAssetSrc } from "../../shared/lib/getAssetSrc";
 
 const points = ["heroPoint1", "heroPoint2", "heroPoint3"];
@@ -97,9 +97,9 @@ const Content = styled.div`
   overflow: hidden;
   border-radius: ${Theme.radius.large};
   padding: 40px;
-  background: radial-gradient(circle at top right, rgba(242, 247, 250, 0.2), transparent 30%),
-  radial-gradient(circle at bottom left, rgba(228, 237, 243, 0.16), transparent 34%),
-  linear-gradient(145deg, ${Theme.colors.primary700}, ${Theme.colors.primary500});
+  background: radial-gradient(circle at top right, rgba(255, 240, 246, 0.18), transparent 30%),
+  radial-gradient(circle at bottom left, rgba(253, 231, 240, 0.18), transparent 34%),
+  linear-gradient(145deg, ${Theme.colors.primary800}, ${Theme.colors.primary500});
   box-shadow: ${Theme.shadow.medium};
 
   &::after {
@@ -108,7 +108,7 @@ const Content = styled.div`
     inset: auto -80px -120px auto;
     width: 240px;
     height: 240px;
-    background: radial-gradient(circle, rgba(242, 247, 250, 0.24), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 231, 241, 0.26), transparent 70%);
   }
 
   @media ${Theme.media.mobile} {
@@ -155,12 +155,13 @@ const ActionLink = styled(Link)`
 
 const PrimaryLink = styled(ActionLink)`
   color: ${Theme.colors.white};
-  background: linear-gradient(135deg, ${Theme.colors.primary600}, ${Theme.colors.primary500});
-  box-shadow: 0 16px 32px rgba(18, 52, 59, 0.16);
+  //background: linear-gradient(135deg, ${Theme.colors.primary600}, ${Theme.colors.primary});
+  background: linear-gradient(180deg, rgba(255, 248, 251, 0.98), rgba(246, 228, 237, 0.92));
+  box-shadow: 0 16px 32px rgba(95, 18, 51, 0.22);
 `;
 
 const SecondaryLink = styled(ActionLink)`
-  color: ${Theme.colors.white};
+  color: ${Theme.colors.white}!important;
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.42);
 `;
@@ -185,7 +186,7 @@ const Point = styled.li`
     flex: 0 0 10px;
     border-radius: 50%;
     background: ${Theme.colors.primary100};
-    box-shadow: 0 0 0 6px rgba(242, 247, 250, 0.14);
+    box-shadow: 0 0 0 6px rgba(255, 233, 242, 0.16);
   }
 `;
 
@@ -199,11 +200,12 @@ const Aside = styled.div`
   overflow: hidden;
   border: 0.5px solid ${Theme.colors.background};
   box-shadow: ${Theme.shadow.medium};
-  background: linear-gradient(
-      180deg,
-      #e3e8ef,
-      #e5eaf1 100%
-  );
+  background:
+  radial-gradient(circle at top right,rgba(201,18,93,0.13),transparent 75%),
+  linear-gradient(180deg,rgba(255,252,253,0.98),rgba(246,233,239,0.94) 100%);
+  
+    //radial-gradient(circle at top right, rgba(201, 18, 93, 0.10), transparent 32%),
+    //linear-gradient(180deg, rgba(255, 252, 253, 0.98), rgba(246, 233, 239, 0.94) 100%);
 
   @media ${Theme.media.mobile} {
     padding: 16px;
@@ -213,10 +215,10 @@ const Aside = styled.div`
 const AsideBackground = styled.img`
   position: absolute;
   width: 100%;
-  height: 75%;
+  height: 85%;
   object-fit: cover;
   object-position: center;
-  bottom: -15px;
+  bottom: -1px;
 
   @media ${Theme.media.break} {
     max-width: 500px;
@@ -255,7 +257,7 @@ const ClinicalDesc = styled.p`
   margin: 0;
   max-width: 34ch;
   line-height: 1.65;
-  color: rgba(24, 49, 63, 0.72);
+  color: rgba(86, 16, 45, 0.72);
   ${font({ weight: 500, fmax: 16, fmin: 14, color: Theme.colors.text })};
 `;
 
@@ -289,8 +291,9 @@ const VerticalFlow = styled.div`
   width: 100%;
   height: 100%;
   max-width: 150px;
-  min-height: 430px;
-  max-height: 550px;
+  min-height: 450px;
+  max-height: 650px;
+  margin-top: 20px;
 `;
 
 const VerticalFlowStep = styled.div`
@@ -339,19 +342,19 @@ const FlowContent = styled.div<{ $index: number }>`
   animation-delay: ${(props) => props.$index * 2}s;
 
   strong {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.1;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: #505e6b;
+    color: ${Theme.colors.textSecondary};
     transition: color ${Theme.animations.transition};
   }
 
   small {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.35;
     font-weight: 500;
-    color: #505e6b;
+    color: ${Theme.colors.textMuted};
     transition: color ${Theme.animations.transition};
   }
 
@@ -367,7 +370,7 @@ const FlowContent = styled.div<{ $index: number }>`
 
   @keyframes heroFlowTextStrong {
     0%, 18%, 100% {
-      color: #505e6b;
+      color: ${Theme.colors.textSecondary};
     }
 
     8%, 14% {
@@ -377,11 +380,11 @@ const FlowContent = styled.div<{ $index: number }>`
 
   @keyframes heroFlowTextSmall {
     0%, 18%, 100% {
-      color: #505e6b;
+      color: ${Theme.colors.textMuted};
     }
 
     8%, 14% {
-      color: rgba(24, 49, 63, 0.9);
+      color: rgba(86, 16, 45, 0.88);
     }
   }
 
@@ -401,10 +404,10 @@ const FlowDot = styled.div<{ $index: number; $variant: "start" | "middle" | "end
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: linear-gradient(180deg, #d9e3ec 0%, #c2cfdb 100%);
-  border: 1px solid rgba(136, 154, 173, 0.38);
-  box-shadow: 0 2px 20px rgba(18, 52, 59, 0.14), 0 6px 18px rgba(255, 255, 255, 0.18);
-  filter: drop-shadow(0 10px 14px rgba(18, 52, 59, 0.16));
+  background: linear-gradient(180deg, #f7e4ec 0%, #ecc6d7 100%);
+  border: 1px solid rgba(173, 14, 79, 0.30);
+  box-shadow: 0 2px 20px rgba(95, 18, 51, 0.14), 0 6px 18px rgba(255, 255, 255, 0.18);
+  filter: drop-shadow(0 10px 14px rgba(95, 18, 51, 0.16));
   animation: heroFlowDot 8s ease-in-out infinite;
   animation-delay: ${(props) => props.$index * 2}s;
 
@@ -413,7 +416,7 @@ const FlowDot = styled.div<{ $index: number; $variant: "start" | "middle" | "end
     position: absolute;
     inset: 7px;
     border-radius: 50%;
-    background: #889aad;
+    background: ${Theme.colors.primary600};
     display: block;
     transform: scale(1);
     transform-origin: center;
@@ -436,30 +439,30 @@ const FlowDot = styled.div<{ $index: number; $variant: "start" | "middle" | "end
   @keyframes heroFlowDot {
     0%, 18%, 100% {
       transform: scale(1);
-      background: linear-gradient(180deg, #d9e3ec 0%, #c2cfdb 100%);
-      border-color: rgba(136, 154, 173, 0.38);
-      box-shadow: 0 2px 20px rgba(18, 52, 59, 0.14), 0 6px 18px rgba(255, 255, 255, 0.18);
-      filter: drop-shadow(0 10px 14px rgba(18, 52, 59, 0.16));
+      background: linear-gradient(180deg, #f7e4ec 0%, #ecc6d7 100%);
+      border-color: rgba(173, 14, 79, 0.30);
+      box-shadow: 0 2px 20px rgba(95, 18, 51, 0.14), 0 6px 18px rgba(255, 255, 255, 0.18);
+      filter: drop-shadow(0 10px 14px rgba(95, 18, 51, 0.16));
     }
 
     8%, 14% {
       transform: scale(${(props) => (props.$variant === "end" ? 1.02 : 1.01)});
       background: ${Theme.colors.white};
-      border-color: rgba(111, 152, 196, 0.82);
+      border-color: rgba(201, 18, 93, 0.72);
       box-shadow:
-        0 0 1px 2px rgba(111, 152, 196, 0.9),
+        0 0 1px 2px rgba(201, 18, 93, 0.78),
         0 0 1px 5px rgba(255, 255, 255, 0.92),
-        0 0 3px 6px rgba(111, 152, 196, 0.84),
+        0 0 3px 6px rgba(201, 18, 93, 0.68),
         0 0 1px 7px rgba(255, 255, 255, 0.95),
-        0 0 10px 7px rgba(111, 152, 196, 0.78),
+        0 0 10px 7px rgba(201, 18, 93, 0.52),
         0 0 3px 12px rgba(255, 255, 255, 0.9);
-      filter: drop-shadow(0 12px 16px rgba(18, 52, 59, 0.18));
+      filter: drop-shadow(0 12px 16px rgba(95, 18, 51, 0.18));
     }
   }
 
   @keyframes heroFlowDotCore {
     0%, 18%, 100% {
-      background: #889aad;
+      background: ${Theme.colors.primary600};
       opacity: 1;
       transform: scale(1);
     }
@@ -472,7 +475,7 @@ const FlowDot = styled.div<{ $index: number; $variant: "start" | "middle" | "end
 
   @keyframes heroFlowDotCoreEnd {
     0%, 18%, 100% {
-      background: #889aad;
+      background: ${Theme.colors.primary600};
       opacity: 1;
       transform: scale(1);
     }
@@ -516,17 +519,17 @@ const FlowAxis = styled.div`
   bottom: 80px;
   left: 11px;
   width: 2px;
-  background: rgba(92, 124, 148, 0.5);
+  background: linear-gradient(180deg, rgba(201, 18, 93, 0.28), rgba(173, 14, 79, 0.52));
 `;
 
 const FlowLabel = styled.div`
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.58);
-  border: 1px solid rgba(255, 255, 255, 0.48);
+  background: rgba(255, 248, 251, 0.78);
+  border: 1px solid rgba(201, 18, 93, 0.18);
   backdrop-filter: blur(6px);
   text-align: start;
-  color: #505e6b;
+  color: ${Theme.colors.textSecondary};
   z-index: 1;
-  ${font({ weight: 600, fmax: 14, fmin: 12, color: "#505e6b" })};
+  ${font({ weight: 600, fmax: 14, fmin: 12, color: Theme.colors.textSecondary })};
 `;

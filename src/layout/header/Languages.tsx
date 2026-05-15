@@ -79,7 +79,7 @@ const Overlay = styled.button`
   position: fixed;
   inset: 0;
   z-index: 1001;
-  background: rgba(18, 52, 59, 0.18);
+  background: rgba(67, 4, 31, 0.18);
 `;
 
 const Shell = styled.div`
@@ -95,7 +95,7 @@ const Trigger = styled.button`
   padding: 0 14px;
   border-radius: ${Theme.radius.pill};
   background: ${Theme.colors.primary50};
-  border: 1px solid rgba(111, 143, 168, 0.28);
+  border: 1px solid rgba(201, 18, 93, 0.22);
   transition: ${Theme.animations.transition};
   ${font({ weight: 700, fmax: 14, fmin: 12, color: Theme.colors.primaryDeep })};
 
@@ -131,7 +131,7 @@ const Popup = styled.div<{ $open: boolean }>`
   padding: 8px;
   border-radius: ${Theme.radius.medium};
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(111, 143, 168, 0.16);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   box-shadow: ${Theme.shadow.medium};
   opacity: 0;
   visibility: hidden;
@@ -157,7 +157,7 @@ const LangButton = styled.button<{ $active: boolean }>`
   text-align: left;
   ${font({ weight: 700, fmax: 14, fmin: 12 })};
   color: ${(props) => (props.$active ? Theme.colors.white : Theme.colors.textMuted)};
-  background: ${(props) => (props.$active ? `linear-gradient(135deg, ${Theme.colors.primary700}, ${Theme.colors.primary500})` : "transparent")};
+  background: ${(props) => (props.$active ? `linear-gradient(135deg, ${Theme.colors.primary700}, ${Theme.colors.primary})` : "transparent")};
 
   &:hover {
     color: ${Theme.colors.white};

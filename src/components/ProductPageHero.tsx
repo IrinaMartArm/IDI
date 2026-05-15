@@ -87,9 +87,9 @@ const Shell = styled.div`
   padding: 34px;
   border-radius: ${Theme.radius.large};
   background:
-    radial-gradient(circle at 76% 34%, rgba(244, 251, 255, 0.3) 0%, rgba(244, 251, 255, 0.1) 18%, transparent 42%),
-    radial-gradient(circle at 82% 68%, rgba(189, 212, 229, 0.22) 0%, rgba(189, 212, 229, 0.08) 26%, transparent 56%),
-    linear-gradient(145deg, #536f86 0%, #64849c 48%, #7695ad 100%);
+    radial-gradient(circle at 76% 34%, rgba(255, 242, 247, 0.26) 0%, rgba(255, 242, 247, 0.08) 18%, transparent 42%),
+    radial-gradient(circle at 82% 68%, rgba(248, 194, 217, 0.22) 0%, rgba(248, 194, 217, 0.08) 26%, transparent 56%),
+    linear-gradient(145deg, ${Theme.colors.primary800} 0%, ${Theme.colors.primary700} 48%, ${Theme.colors.primary500} 100%);
   box-shadow: ${Theme.shadow.medium};
 
   &::after {
@@ -100,7 +100,7 @@ const Shell = styled.div`
     height: 100%;
     background:
       radial-gradient(circle at 80% 36%, rgba(255, 255, 255, 0.14), transparent 24%),
-      radial-gradient(circle at 78% 58%, rgba(213, 228, 238, 0.16), transparent 30%),
+      radial-gradient(circle at 78% 58%, rgba(255, 221, 235, 0.14), transparent 30%),
       repeating-linear-gradient(
         0deg,
         rgba(255, 255, 255, 0.05) 0px,
@@ -115,9 +115,9 @@ const Shell = styled.div`
   @media ${Theme.media.break} {
     grid-template-columns: 1fr;
     background:
-      radial-gradient(circle at 50% 75%, rgba(244, 251, 255, 0.3) 0%, rgba(244, 251, 255, 0.1) 18%, transparent 42%),
-      radial-gradient(circle at 82% 68%, rgba(189, 212, 229, 0.22) 0%, rgba(189, 212, 229, 0.08) 26%, transparent 56%),
-      linear-gradient(145deg, #536f86 0%, #64849c 48%, #7695ad 100%);
+      radial-gradient(circle at 50% 75%, rgba(255, 242, 247, 0.26) 0%, rgba(255, 242, 247, 0.08) 18%, transparent 42%),
+      radial-gradient(circle at 82% 68%, rgba(248, 194, 217, 0.22) 0%, rgba(248, 194, 217, 0.08) 26%, transparent 56%),
+      linear-gradient(145deg, ${Theme.colors.primary800} 0%, ${Theme.colors.primary700} 48%, ${Theme.colors.primary500} 100%);
   }
 
   @media ${Theme.media.mobile} {
@@ -208,9 +208,9 @@ const ActionBase = styled.a`
 `;
 
 const PrimaryAction = styled(ActionBase)`
-  color: #16303f;
-  background: rgba(217, 233, 242, 0.9);
-  box-shadow: 0 14px 28px rgba(16, 36, 48, 0.12);
+  color: ${Theme.colors.primaryDeep};
+  background: rgba(255, 245, 249, 0.94);
+  box-shadow: 0 14px 28px rgba(67, 4, 31, 0.16);
 `;
 
 
@@ -233,7 +233,7 @@ const Visual = styled.div`
     transform: translateX(-50%);
     border-radius: 999px;
     z-index: 0;
-    background: radial-gradient(circle, rgba(226, 242, 251, 0.72) 0%, rgba(170, 205, 226, 0.32) 32%, rgba(132, 176, 201, 0.12) 56%, transparent 80%);
+    background: radial-gradient(circle, rgba(248, 215, 229, 0.72) 0%, rgba(230, 120, 172, 0.28) 32%, rgba(173, 14, 79, 0.12) 56%, transparent 80%);
     filter: blur(72px);
   }
 
@@ -256,7 +256,7 @@ const VisualGlow = styled.div`
   transform: translateX(-50%);
   z-index: 0;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(206, 228, 241, 0.18) 36%, rgba(111, 143, 168, 0) 74%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(248, 214, 228, 0.18) 36%, rgba(201, 18, 93, 0) 74%);
   filter: blur(54px);
 `;
 

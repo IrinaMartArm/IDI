@@ -23,7 +23,7 @@ export const Title = styled.h2<TitlePropsStyled>`
     width: 84px;
     height: 4px;
     border-radius: ${Theme.radius.pill};
-    background: linear-gradient(90deg, ${Theme.colors.primary700}, ${Theme.colors.primary500});
+    background: linear-gradient(90deg, ${Theme.colors.primary700}, ${Theme.colors.primary});
     left: 0;
     bottom: -18px;
 

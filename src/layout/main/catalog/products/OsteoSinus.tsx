@@ -233,10 +233,10 @@ const SectionBlock = styled.section`
   margin-top: 22px;
   padding: 30px 28px;
   border-radius: ${Theme.radius.large};
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.12), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(242, 247, 250, 0.94));
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
   box-shadow: ${Theme.shadow.soft};
 
   @media (max-width: 900px) {
@@ -259,8 +259,8 @@ const SectionLead = styled.p`
   margin: 0;
   max-width: 72ch;
   line-height: 1.65;
-  color: rgba(24, 49, 63, 0.76);
-  ${font({weight: 400, fmax: 18, fmin: 15, color: "rgba(24, 49, 63, 0.76)"})};
+  color: rgba(86, 16, 45, 0.72);
+  ${font({weight: 400, fmax: 18, fmin: 15, color: Theme.colors.textMuted})};
 `;
 
 const ToolsGrid = styled.div`
@@ -280,9 +280,9 @@ const ToolCard = styled.article`
   align-items: center;
   padding: 22px;
   border-radius: 24px;
-  background: white;
-  border: 1px solid rgba(111, 143, 168, 0.14);
-  box-shadow: 0 14px 32px rgba(18, 52, 59, 0.06);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(201, 18, 93, 0.14);
+  box-shadow: 0 14px 32px rgba(95, 18, 51, 0.08);
 
   @media (max-width: 760px) {
     grid-template-columns: 1fr;
@@ -297,7 +297,7 @@ const ToolMedia = styled.div`
   border-radius: 20px;
   background:
     radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0) 42%),
-    linear-gradient(180deg, rgba(242, 247, 250, 0.96), rgba(228, 237, 243, 0.82));
+    linear-gradient(180deg, rgba(255, 248, 251, 0.96), rgba(245, 228, 236, 0.82));
 `;
 
 const ToolImage = styled.img`
@@ -329,8 +329,8 @@ const ToolSubtitle = styled.p`
 const ToolDescription = styled.p`
   margin: 0;
   line-height: 1.6;
-  color: rgba(24, 49, 63, 0.78);
-  ${font({weight: 400, fmax: 16, fmin: 14, color: "rgba(24, 49, 63, 0.78)"})};
+  color: rgba(86, 16, 45, 0.78);
+  ${font({weight: 400, fmax: 16, fmin: 14, color: Theme.colors.textMuted})};
 `;
 
 const SizesBlock = styled.div`
@@ -369,7 +369,7 @@ const SizesVisual = styled.div`
   border-radius: 24px;
   //background: rgba(247, 249, 251, 0.92);
   background: #fff;
-  border: 1px solid rgba(111, 143, 168, 0.12);
+  border: 1px solid rgba(201, 18, 93, 0.12);
 `;
 
 const SizesImage = styled.img`
@@ -387,8 +387,8 @@ const SafetyBlock = styled.section`
   //background:
   //  radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 28%),
   //  linear-gradient(135deg, rgba(78, 106, 125, 0.98), rgba(101, 132, 152, 0.92));
-	background-color: #F4F6F8;
-  border: 1px solid rgba(111, 143, 168, 0.2);
+	background-color: #FBF1F5;
+  border: 1px solid rgba(201, 18, 93, 0.18);
   box-shadow: ${Theme.shadow.medium};
 
   @media (max-width: 900px) {

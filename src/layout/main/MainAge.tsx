@@ -30,22 +30,22 @@ export const MainAge = () => {
     <>
       <Hero />
       <main>
-        <ExpertiseSection id="expertise">
-          <Container>
-            <Title>{t("expertiseTitle")}</Title>
-            <ExpertiseGrid>
-              {cards.map((card) => (
-                <ExpertiseCard key={card.title}>
-                  <ExpertiseHeader>
-                    <ExpertiseIndex />
-                    <h3>{t(card.title)}</h3>
-                  </ExpertiseHeader>
-                  <p>{t(card.text)}</p>
-                </ExpertiseCard>
-              ))}
-            </ExpertiseGrid>
-          </Container>
-        </ExpertiseSection>
+        {/*<ExpertiseSection id="expertise">*/}
+        {/*  <Container>*/}
+        {/*    <Title>{t("expertiseTitle")}</Title>*/}
+        {/*    <ExpertiseGrid>*/}
+        {/*      {cards.map((card) => (*/}
+        {/*        <ExpertiseCard key={card.title}>*/}
+        {/*          <ExpertiseHeader>*/}
+        {/*            <ExpertiseIndex />*/}
+        {/*            <h3>{t(card.title)}</h3>*/}
+        {/*          </ExpertiseHeader>*/}
+        {/*          <p>{t(card.text)}</p>*/}
+        {/*        </ExpertiseCard>*/}
+        {/*      ))}*/}
+        {/*    </ExpertiseGrid>*/}
+        {/*  </Container>*/}
+        {/*</ExpertiseSection>*/}
         <BrandSection>
           <Container>
             <BrandShell>
@@ -105,9 +105,9 @@ const BrandIntro = styled.article`
   padding: 34px;
   border-radius: ${Theme.radius.large};
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.12), transparent 32%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(242, 247, 250, 0.94));
-  border: 1px solid rgba(111, 143, 168, 0.16);
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
+  border: 1px solid rgba(201, 18, 93, 0.14);
   box-shadow: ${Theme.shadow.soft};
 
   @media ${Theme.media.mobile} {
@@ -177,8 +177,8 @@ const BrandFactCard = styled.article`
   min-height: 196px;
   padding: 26px;
   border-radius: ${Theme.radius.large};
-  background: linear-gradient(180deg, rgba(242, 247, 250, 0.96), rgba(228, 237, 243, 0.9));
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  background: linear-gradient(180deg, rgba(255, 248, 251, 0.98), rgba(246, 228, 237, 0.92));
+  border: 1px solid rgba(201, 18, 93, 0.12);
   box-shadow: ${Theme.shadow.soft};
 `;
 
@@ -215,8 +215,8 @@ const ExpertiseCard = styled.article`
   min-height: 220px;
   padding: 28px;
   border-radius: ${Theme.radius.large};
-  border: 1px solid rgba(111, 143, 168, 0.14);
-  background: linear-gradient(180deg, rgba(242, 247, 250, 0.92), rgba(228, 237, 243, 0.78));
+  border: 1px solid rgba(201, 18, 93, 0.12);
+  background: linear-gradient(180deg, rgba(255, 248, 251, 0.94), rgba(245, 231, 238, 0.82));
   box-shadow: ${Theme.shadow.soft};
 
   h3 {

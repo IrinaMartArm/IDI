@@ -24,10 +24,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Noto Sans Armenian', 'Noto Sans', 'Avenir Next', 'Segoe UI', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background:
-                radial-gradient(circle at top left, rgba(111, 143, 168, 0.22), transparent 30%),
-                radial-gradient(circle at top right, rgba(228, 237, 243, 0.8), transparent 34%),
-                linear-gradient(180deg, ${Theme.colors.primary50} 0%, ${Theme.colors.background} 44%, #eef4f8 100%);
+        // background:
+        //         radial-gradient(circle at top left, rgba(201, 18, 93, 0.18), transparent 28%),
+        //         radial-gradient(circle at top right, rgba(250, 222, 234, 0.84), transparent 34%),
+        //         linear-gradient(180deg, ${Theme.colors.backgroundSoft} 0%, ${Theme.colors.background} 46%, ${Theme.colors.surfaceAlt} 100%);
+		background-color: #F8F8F9;
         color: ${Theme.colors.text};
         line-height: 1.5;
         min-width: 360px;
@@ -89,6 +90,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::selection {
-        background: ${Theme.colors.primarySoft};
+        background: ${Theme.colors.accentSoft};
     }
 `

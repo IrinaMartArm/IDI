@@ -22,7 +22,7 @@ const Bar = styled.div`
   padding: 14px 18px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: ${Theme.radius.large};
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 252, 253, 0.88);
   box-shadow: ${Theme.shadow.soft};
 
   @media ${Theme.media.mobile} {
@@ -164,7 +164,7 @@ const MobileToggle = styled.button<{ $open?: boolean }>`
   padding: 0 16px;
   border-radius: ${Theme.radius.pill};
   background: ${Theme.colors.primary50};
-  border: 1px solid rgba(111, 143, 168, 0.28);
+  border: 1px solid rgba(201, 18, 93, 0.22);
   align-items: center;
   justify-content: center;
   position: relative;
@@ -213,8 +213,8 @@ const MobileModal = styled.div<{ $open: boolean }>`
   border-radius: ${Theme.radius.large};
   border: 1px solid rgba(255, 255, 255, 0.82);
   background:
-    radial-gradient(circle at top right, rgba(242, 247, 250, 0.26), transparent 28%),
-    linear-gradient(180deg, rgba(74, 103, 125, 0.97), rgba(18, 52, 59, 0.98));
+    radial-gradient(circle at top right, rgba(255, 230, 240, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(142, 12, 66, 0.98), rgba(67, 4, 31, 0.98));
   box-shadow: ${Theme.shadow.medium};
   opacity: ${(props) => (props.$open ? 1 : 0)};
   visibility: ${(props) => (props.$open ? "visible" : "hidden")};

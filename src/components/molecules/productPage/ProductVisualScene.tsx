@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import styled from "styled-components";
+import { Theme } from "../../../style/Theme";
 
 export const ProductVisualScene = ({ children }: { children: ReactNode }) => {
   return (
@@ -26,11 +27,11 @@ const ProductScene = styled.div`
   min-height: 100%;
   padding: 26px 22px 22px;
   border-radius: 28px;
-  border: 1px solid rgba(111, 143, 168, 0.12);
+  border: 1px solid rgba(201, 18, 93, 0.12);
   background:
     radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0) 38%),
-    linear-gradient(180deg, rgba(242, 247, 250, 0.96), rgba(228, 237, 243, 0.82));
-  box-shadow: 0 22px 44px rgba(18, 52, 59, 0.08);
+    linear-gradient(180deg, rgba(255, 248, 251, 0.98), rgba(245, 228, 236, 0.84));
+  box-shadow: 0 22px 44px rgba(95, 18, 51, 0.10);
 
   @media (max-width: 900px) {
     max-width: 100%;
@@ -45,7 +46,7 @@ const ProductSceneGlow = styled.div`
   height: 220px;
   transform: translateX(-50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(224, 238, 247, 0.82) 0%, rgba(224, 238, 247, 0.26) 34%, rgba(224, 238, 247, 0) 74%);
+  background: radial-gradient(circle, rgba(248, 211, 227, 0.82) 0%, rgba(248, 211, 227, 0.26) 34%, rgba(248, 211, 227, 0) 74%);
   filter: blur(34px);
   z-index: 0;
 `;
@@ -80,7 +81,7 @@ const ProductSceneStage = styled.div`
     height: 44px;
     transform: translateX(-50%);
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(12, 28, 37, 0.26) 0%, rgba(12, 28, 37, 0.12) 38%, rgba(12, 28, 37, 0) 76%);
+    background: radial-gradient(circle, rgba(86, 16, 45, 0.24) 0%, rgba(86, 16, 45, 0.10) 38%, rgba(86, 16, 45, 0) 76%);
     filter: blur(16px);
   }
 `;

@@ -65,16 +65,16 @@ const ProcessCard = styled.article<{ $featured: boolean; $variant: "default" | "
   border-radius: ${(props) => (props.$variant === "soft" ? "22px" : "20px")};
   background: ${(props) =>
     props.$variant === "soft"
-      ? "linear-gradient(180deg, rgba(251, 253, 255, 0.98), rgba(243, 248, 251, 0.94))"
-      : "white"};
+      ? "linear-gradient(180deg, rgba(255, 251, 253, 0.98), rgba(248, 238, 243, 0.94))"
+      : "rgba(255, 255, 255, 0.96)"};
   border: 1px solid
-    ${(props) => (props.$featured ? "rgba(111, 143, 168, 0.2)" : "rgba(111, 143, 168, 0.14)")};
+    ${(props) => (props.$featured ? "rgba(201, 18, 93, 0.2)" : "rgba(201, 18, 93, 0.14)")};
   box-shadow: ${(props) =>
     props.$variant === "soft"
-      ? "0 12px 26px rgba(18, 52, 59, 0.08), 0 2px 0 rgba(255, 255, 255, 0.7) inset"
+      ? "0 12px 26px rgba(95, 18, 51, 0.10), 0 2px 0 rgba(255, 255, 255, 0.7) inset"
       : props.$featured
-        ? "0 18px 34px rgba(18, 52, 59, 0.1)"
-        : "0 14px 32px rgba(18, 52, 59, 0.06)"};
+        ? "0 18px 34px rgba(95, 18, 51, 0.12)"
+        : "0 14px 32px rgba(95, 18, 51, 0.08)"};
   transition: ${Theme.animations.transition};
 
   &:hover {
@@ -92,11 +92,11 @@ const ProcessNumber = styled.span<{ $variant: "plain" | "pill" }>`
   border-radius: ${(props) => (props.$variant === "pill" ? "999px" : "0")};
   background: ${(props) =>
     props.$variant === "pill"
-      ? "linear-gradient(180deg, rgba(235, 244, 249, 0.98), rgba(219, 232, 240, 0.96))"
+      ? "linear-gradient(180deg, rgba(255, 246, 250, 0.98), rgba(247, 225, 235, 0.96))"
       : "transparent"};
   box-shadow: ${(props) =>
     props.$variant === "pill"
-      ? "0 10px 18px rgba(18, 52, 59, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8)"
+      ? "0 10px 18px rgba(95, 18, 51, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8)"
       : "none"};
   color: ${Theme.colors.primary500};
   letter-spacing: ${(props) => (props.$variant === "pill" ? "0.04em" : "0.06em")};
@@ -113,6 +113,6 @@ const ProcessTitle = styled.h3<{ $variant: "default" | "soft" }>`
 const ProcessText = styled.p<{ $tone: "default" | "muted" }>`
   margin: 0;
   line-height: 1.6;
-  color: ${(props) => (props.$tone === "muted" ? Theme.colors.textMuted : "rgba(24, 49, 63, 0.78)")};
-  ${font({ weight: 500, fmax: 16, fmin: 14, color: "rgba(24, 49, 63, 0.78)" })};
+  color: ${(props) => (props.$tone === "muted" ? Theme.colors.textMuted : "rgba(86, 16, 45, 0.78)")};
+  ${font({ weight: 500, fmax: 16, fmin: 14, color: Theme.colors.textMuted })};
 `;

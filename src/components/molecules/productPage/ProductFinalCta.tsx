@@ -106,10 +106,10 @@ const FinalSection = styled.section`
   padding: 28px;
   border-radius: 28px;
   background:
-    radial-gradient(circle at top left, rgba(228, 237, 243, 0.32), transparent 34%),
+    radial-gradient(circle at top left, rgba(255, 226, 238, 0.30), transparent 34%),
     radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 30%),
-    linear-gradient(135deg, #3f6279 0%, ${Theme.colors.primary700} 42%, ${Theme.colors.primary500} 100%);
-  box-shadow: 0 24px 54px rgba(18, 52, 59, 0.2);
+    linear-gradient(135deg, ${Theme.colors.primary800} 0%, ${Theme.colors.primary700} 42%, ${Theme.colors.primary} 100%);
+  box-shadow: 0 24px 54px rgba(95, 18, 51, 0.22);
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -144,11 +144,11 @@ const FinalCtaAction = styled.button`
   min-height: 58px;
   padding: 0 28px;
   border-radius: ${Theme.radius.pill};
-  color: #16303f;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 18px 34px rgba(10, 30, 40, 0.18);
+  color: ${Theme.colors.primaryDeep};
+  background: rgba(255, 252, 253, 0.92);
+  box-shadow: 0 18px 34px rgba(67, 4, 31, 0.18);
   transition: ${Theme.animations.transition};
-  ${font({ weight: 700, fmax: 18, fmin: 15, color: "#16303f" })};
+  ${font({ weight: 700, fmax: 18, fmin: 15, color: Theme.colors.primaryDeep })};
 
   &:hover {
     transform: translateY(-2px);
@@ -180,9 +180,9 @@ const ContactModal = styled.div<{ $open: boolean }>`
   padding: 28px;
   border-radius: 28px;
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.16), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 250, 0.97));
-  box-shadow: 0 28px 72px rgba(10, 30, 40, 0.24);
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 241, 245, 0.97));
+  box-shadow: 0 28px 72px rgba(67, 4, 31, 0.24);
   opacity: ${(props) => (props.$open ? 1 : 0)};
   visibility: ${(props) => (props.$open ? "visible" : "hidden")};
   pointer-events: ${(props) => (props.$open ? "auto" : "none")};
@@ -197,8 +197,8 @@ const ContactModalClose = styled.button`
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(240, 245, 248, 0.9);
-  border: 1px solid rgba(111, 143, 168, 0.16);
+  background: rgba(255, 246, 250, 0.9);
+  border: 1px solid rgba(201, 18, 93, 0.16);
 
   span {
     position: absolute;
@@ -251,8 +251,8 @@ const ContactCard = styled.a`
   padding: 18px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(111, 143, 168, 0.14);
-  box-shadow: 0 12px 24px rgba(18, 52, 59, 0.06);
+  border: 1px solid rgba(201, 18, 93, 0.14);
+  box-shadow: 0 12px 24px rgba(95, 18, 51, 0.08);
   transition: ${Theme.animations.transition};
 
   &:hover {
@@ -268,7 +268,7 @@ const ContactCardIcon = styled.span`
   height: 46px;
   border-radius: 16px;
   color: ${Theme.colors.primaryDeep};
-  background: rgba(228, 237, 243, 0.9);
+  background: rgba(248, 228, 237, 0.92);
 `;
 
 const ContactCardBody = styled.div`
@@ -298,7 +298,7 @@ const ContactModalFooter = styled.div`
   gap: 4px;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid rgba(111, 143, 168, 0.12);
+  border-top: 1px solid rgba(201, 18, 93, 0.12);
 `;
 
 const ContactModalFooterTitle = styled.h4`

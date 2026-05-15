@@ -18,7 +18,9 @@ const FooterWrapper = styled.div`
   border-radius: 28px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.15);
   border-top: 1px solid rgba(255,255,255,0.08);
-  background: linear-gradient(135deg, #5F7588 0%, #53697C 45%, #465C70 100%);
+  background:
+    radial-gradient(circle at top right, rgba(255, 228, 239, 0.14), transparent 30%),
+    linear-gradient(135deg, ${Theme.colors.primary800} 0%, ${Theme.colors.primary700} 45%, ${Theme.colors.primary600} 100%);
 
   @media ${Theme.media.tablet} {
     padding: 38px 56px 48px ;
@@ -114,6 +116,11 @@ const Contact = styled.div`
   }
 `;
 
+const Phones = styled.div`
+    display: flex;
+    gap: 12px;
+`
+
 const Contact2 = styled.a`
   display: flex;
   align-items: start;
@@ -127,7 +134,7 @@ const Contact2 = styled.a`
   }
 
   &:hover {
-    background: rgba(228, 237, 243, 0.16);
+    background: rgba(255, 228, 239, 0.16);
   }
 `;
 
@@ -163,7 +170,7 @@ const SocialLink = styled.li`
   }
 
   a:hover {
-    background: rgba(111, 143, 168, 0.35);
+    background: rgba(255, 228, 239, 0.22);
     transform: translateY(-2px);
   }
 `;
@@ -192,6 +199,7 @@ export const S = {
   BrandName,
   BrandText,
   Contact,
+  Phones,
   Contact2,
   ContactsBox,
   Copyright,

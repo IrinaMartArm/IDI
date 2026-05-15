@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { font, headingFont } from "../../../style/Common";
+import { Theme } from "../../../style/Theme";
 import { ProductAdvantagesProps } from "./types";
 
 export const ProductAdvantages = ({ title, lead, items }: ProductAdvantagesProps) => {
@@ -30,11 +31,11 @@ const AdvantagesSection = styled.section`
   margin-top: 22px;
   padding: 30px 28px;
   border-radius: 32px;
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  border: 1px solid rgba(201, 18, 93, 0.14);
   background:
-    radial-gradient(circle at top right, rgba(111, 143, 168, 0.12), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(242, 247, 250, 0.94));
-  box-shadow: 0 14px 40px rgba(18, 52, 59, 0.08);
+    radial-gradient(circle at top right, rgba(201, 18, 93, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 237, 242, 0.94));
+  box-shadow: 0 14px 40px rgba(95, 18, 51, 0.10);
 
   @media (max-width: 900px) {
     padding: 24px 20px;
@@ -43,16 +44,16 @@ const AdvantagesSection = styled.section`
 
 const AdvantagesTitle = styled.h2`
   margin: 0;
-  color: #18313f;
-  ${font({ family: headingFont, weight: 600, fmax: 32, fmin: 28, color: "#18313f" })};
+  color: ${Theme.colors.primaryDeep};
+  ${font({ family: headingFont, weight: 600, fmax: 32, fmin: 28, color: Theme.colors.primaryDeep })};
 `;
 
 const AdvantagesLead = styled.p`
   margin: 12px 0 0;
   max-width: 72ch;
   line-height: 1.65;
-  color: rgba(24, 49, 63, 0.76);
-  ${font({ weight: 400, fmax: 18, fmin: 15, color: "rgba(24, 49, 63, 0.76)" })};
+  color: rgba(86, 16, 45, 0.72);
+  ${font({ weight: 400, fmax: 18, fmin: 15, color: Theme.colors.textMuted })};
 `;
 
 const AdvantagesGrid = styled.div`
@@ -71,9 +72,9 @@ const AdvantageCard = styled.article`
   gap: 14px;
   padding: 24px;
   border-radius: 20px;
-  background: #fff;
-  border: 1px solid rgba(111, 143, 168, 0.14);
-  box-shadow: 0 12px 24px rgba(18, 52, 59, 0.06);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(201, 18, 93, 0.14);
+  box-shadow: 0 12px 24px rgba(95, 18, 51, 0.08);
 
   @media (max-width: 700px) {
     padding: 16px;
@@ -97,11 +98,11 @@ const AdvantageIcon = styled.span<{ $accent: number }>`
   border: 1.5px solid
     ${(props) =>
       props.$accent === 0
-        ? "rgba(92, 124, 148, 0.5)"
+        ? "rgba(201, 18, 93, 0.42)"
         : props.$accent === 1
-          ? "rgba(73, 118, 144, 0.42)"
-          : "rgba(47, 111, 115, 0.38)"};
-  background: rgba(255, 255, 255, 0.88);
+          ? "rgba(173, 14, 79, 0.34)"
+          : "rgba(103, 7, 47, 0.32)"};
+  background: rgba(255, 250, 252, 0.88);
 
   &::after {
     content: "";
@@ -109,7 +110,7 @@ const AdvantageIcon = styled.span<{ $accent: number }>`
     inset: 6px;
     border-radius: 50%;
     background: ${(props) =>
-      props.$accent === 0 ? "#6f8fa8" : props.$accent === 1 ? "#7c98ad" : "#4a768c"};
+      props.$accent === 0 ? Theme.colors.primary : props.$accent === 1 ? Theme.colors.primary600 : Theme.colors.primary800};
   }
 
   @media (max-width: 700px) {
@@ -119,15 +120,15 @@ const AdvantageIcon = styled.span<{ $accent: number }>`
 
 const AdvantageCardTitle = styled.h3`
   margin: 0;
-  color: #18313f;
+  color: ${Theme.colors.primaryDeep};
   line-height: 1.2;
   letter-spacing: -0.01em;
-  ${font({ family: headingFont, weight: 700, fmax: 24, fmin: 20, color: "#18313f" })};
+  ${font({ family: headingFont, weight: 700, fmax: 24, fmin: 20, color: Theme.colors.primaryDeep })};
 `;
 
 const AdvantageCardText = styled.p`
   margin: 0;
-  color: rgba(24, 49, 63, 0.8);
+  color: rgba(86, 16, 45, 0.78);
   line-height: 1.6;
-  ${font({ weight: 500, fmax: 16, fmin: 14, color: "rgba(24, 49, 63, 0.8)" })};
+  ${font({ weight: 500, fmax: 16, fmin: 14, color: Theme.colors.textMuted })};
 `;

@@ -46,9 +46,9 @@ const Item = styled(motion.article)`
   //background: linear-gradient(180deg, rgba(242, 247, 250, 0.92), rgba(228, 237, 243, 0.74));
   //box-shadow: ${Theme.shadow.soft};
   transition: ${Theme.animations.transition};
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.06);
-  background: linear-gradient(180deg, #EDF3F6, #D6E1E8);
+  box-shadow: 0 10px 25px rgba(95, 18, 51, 0.10);
+  border: 1px solid rgba(201, 18, 93, 0.10);
+  background: linear-gradient(180deg, #FFF8FB, #F1DDE6);
 
   &:hover {
     transform: translateY(-2px);
@@ -125,8 +125,8 @@ const List = styled.ul`
   gap: 8px;
   padding: 6px;
   border-radius: ${Theme.radius.pill};
-  background: rgba(242, 247, 250, 0.9);
-  border: 1px solid rgba(111, 143, 168, 0.14);
+  background: rgba(255, 244, 248, 0.92);
+  border: 1px solid rgba(201, 18, 93, 0.14);
 
   @media ${Theme.media.tablet} {
     width: 100%;
@@ -152,7 +152,7 @@ const Link = styled.a<{active: boolean}>`
 
   ${props => props.active && css<{active: boolean}>`
     color: ${Theme.colors.white};
-    background: linear-gradient(135deg, ${Theme.colors.primary700}, ${Theme.colors.primary500});
+    background: linear-gradient(135deg, ${Theme.colors.primary700}, ${Theme.colors.primary});
     box-shadow: ${Theme.shadow.soft};
   `}
 `;
