@@ -13,10 +13,12 @@ export const Header: React.FC = () => {
   const { t } = useTranslation("common");
   const [open, setOpen] = React.useState(false);
   const items = [
-    t("navAwards"),
-    t("navServices"),
-    t("navClinics"),
-    t("navPartners"),
+    t("navProducts"),
+    t("navExperts"),
+    t("navPatients"),
+    t("navCatalogs"),
+    t("navDocumentation"),
+    t("navContacts"),
   ];
 
   React.useEffect(() => {

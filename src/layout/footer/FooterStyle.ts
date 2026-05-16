@@ -60,7 +60,7 @@ const BrandLockup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 16px;
   width: clamp(300px, 100%, 380px);
 `;
 
@@ -74,6 +74,10 @@ const BrandName = styled.h2`
 const BrandText = styled.p`
   color: rgba(255,255,255,0.7);
   margin-left: 12px;
+  max-width: 34ch;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  ${font({ weight: 400, color: Theme.colors.white, fmax: 16, fmin: 16 })};
 
   @media ${Theme.media.tablet} {
     margin-left: 0;
@@ -95,30 +99,51 @@ const ContactsBox = styled.div`
   align-items: flex-start;
   gap: 20px;
   width: clamp(320px, 100%, 400px);
+  min-width: 0;
 
   p {
-    ${font({ weight: 400, color: Theme.colors.white, fmax: 18, fmin: 14 })};
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    ${font({ weight: 400, color: Theme.colors.white, fmax: 16, fmin: 16 })};
   }
 
   @media ${Theme.media.mobile} {
     height: auto;
+    width: 100%;
   }
 `;
 
 const Contact = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+  width: 100%;
+  min-width: 0;
 
   img {
     width: 22px;
     opacity: 0.8;
+    flex: 0 0 22px;
+  }
+
+  p {
+    min-width: 0;
   }
 `;
 
 const Phones = styled.div`
     display: flex;
     gap: 12px;
+    width: 100%;
+    min-width: 0;
+
+    img {
+      flex: 0 0 22px;
+    }
+
+    @media ${Theme.media.mobile} {
+      align-items: flex-start;
+    }
 `
 
 const Contact2 = styled.a`
@@ -127,10 +152,15 @@ const Contact2 = styled.a`
   gap: 12px;
   border-radius: 18px;
   transition: ${Theme.animations.transition};
+  min-width: 0;
 
   img {
     width: 22px;
     opacity: 0.9;
+  }
+
+  p {
+    min-width: 0;
   }
 
   &:hover {
@@ -142,6 +172,7 @@ const Social = styled.div`
   display: grid;
   gap: 6px;
   min-width: 180px;
+  width: 100%;
 `;
 
 const SocialList = styled.ul`
@@ -186,11 +217,11 @@ const Copyright = styled.small`
 `;
 
 const Logotip = styled.img`
-  width: 170px;
+  width: min(250px, 100%);
   object-fit: contain;
 
   @media ${Theme.media.tablet} {
-    margin-left: -14px;
+    margin-left: 0;
   }
 `
 
