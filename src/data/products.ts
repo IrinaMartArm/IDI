@@ -3,7 +3,7 @@ import guide from "../images/pictures/main/osteo.png";
 import id3 from "../images/pictures/main/q2.png";
 import idcam from "../images/pictures/main/q5.png";
 import osteo from "../images/pictures/main/q8.png";
-import surgicalSet from "../images/pictures/main/creativefabrica-ai-image-editor-0-bot.png";
+import surgicalSet from "../images/pictures/main/surgicalSet.png";
 import elements from "../images/pictures/main/prosthatic.png";
 import surgicalKits from "../images/pictures/main/q11.png";
 import { getAssetSrc } from "../shared/lib/getAssetSrc";
