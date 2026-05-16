@@ -457,7 +457,7 @@ const MobileProductLink = styled(Link)<{ $active: boolean }>`
 `;
 
 const LogotipDesktop = styled.img`
-  width: 170px;
+  width: 190px;
   object-fit: contain;
 
   @media ${Theme.media.tablet} {
@@ -467,12 +467,12 @@ const LogotipDesktop = styled.img`
 
 const LogotipMobile = styled.img`
   display: none;
-  width: 150px;
+  width: 170px;
   object-fit: contain;
 
   @media ${Theme.media.tablet} {
     display: block;
-    width: 150px;
+    width: 170px;
   }
 `;
 
