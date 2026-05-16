@@ -69,6 +69,7 @@ const ImgBox = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  max-height: 385px;
   background: linear-gradient(180deg, ${Theme.colors.primary50} 0%, ${Theme.colors.primary100} 100%);
 `;
 

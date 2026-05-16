@@ -66,7 +66,7 @@ export const Catalog: React.FC = () => {
                 style={{ height: "100%" }}
               >
                   <St.CardLink href={el.path}>
-                  <Item title={t(el.titleKey)} text={t(el.descriptionKey)} image={el.image} alt={t(el.altKey)}/>
+                    <Item title={t(el.titleKey)} text={t(el.descriptionKey)} image={el.image} alt={t(el.altKey)}/>
                   </St.CardLink>
               </motion.div>
             );

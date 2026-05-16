@@ -60,7 +60,7 @@ const BrandLockup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 32px;
   width: clamp(300px, 100%, 380px);
 `;
 
@@ -73,15 +73,10 @@ const BrandName = styled.h2`
 
 const BrandText = styled.p`
   color: rgba(255,255,255,0.7);
-  margin-left: 12px;
   max-width: 34ch;
   overflow-wrap: anywhere;
   word-break: break-word;
   ${font({ weight: 400, color: Theme.colors.white, fmax: 16, fmin: 16 })};
-
-  @media ${Theme.media.tablet} {
-    margin-left: 0;
-  }
 `;
 
 const SectionTitle = styled.h3`
@@ -124,6 +119,7 @@ const Contact = styled.div`
     width: 22px;
     opacity: 0.8;
     flex: 0 0 22px;
+    margin-top: 3px;
   }
 
   p {
@@ -138,7 +134,10 @@ const Phones = styled.div`
     min-width: 0;
 
     img {
+      width: 22px;
+      opacity: 0.8;
       flex: 0 0 22px;
+      margin-top: 3px;
     }
 
     @media ${Theme.media.mobile} {
